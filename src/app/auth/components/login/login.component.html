@@ -1,0 +1,22 @@
+<section>
+    <div class="container">
+        <div class="frm">
+            <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+                <input 
+                type="text" 
+                name="username" 
+                placeholder="Enter your Username..." 
+                ngModel 
+                required 
+                #username="ngModel">
+                <input type="password" 
+                name="password" 
+                placeholder="Enter your password..." 
+                ngModel 
+                required 
+                #password="ngModel">
+                <button type="submit" [disabled]="f.invalid">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
